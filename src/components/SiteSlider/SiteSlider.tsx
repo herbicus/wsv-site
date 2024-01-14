@@ -94,13 +94,22 @@ const SiteSlider: React.FC<any> = ({ title, subtitle, slides }) => {
               <div className="swiper-slide" key={key}>
                 <figure className="aspect-h-4 aspect-w-3 relative bg-black pt-32 lg:aspect-h-7 lg:aspect-w-16 lg:pt-0">
                   {slide.image && (
-                    <SiteImage
-                      image={slide.image}
-                      classes="object-cover z-[2] inset-0 pointer-events-none"
-                      objectFit="cover"
-                      blurUrl={slide.image.lqip}
-                      alt=""
-                    />
+                    <>
+                      <SiteImage
+                        image={slide.image}
+                        classes="object-contain z-[2] inset-0 pointer-events-none"
+                        objectFit="contain"
+                        blurUrl={slide.image.lqip}
+                        alt=""
+                      />
+                      <SiteImage
+                        image={slide.image}
+                        classes="hidden object-cover z-[1] opacity-30 blur-md inset-0 pointer-events-none lg:block"
+                        objectFit="cover"
+                        blurUrl={slide.image.lqip}
+                        alt=""
+                      />
+                    </>
                   )}
 
                   <figcaption className="z-30 flex items-center lg:items-end">
@@ -110,7 +119,7 @@ const SiteSlider: React.FC<any> = ({ title, subtitle, slides }) => {
                           <RichText
                             theme="dark"
                             content={slide.description}
-                            classes="pslate-p:text-lg pslate-p:lg:text-xl lg:mb-12"
+                            classes="prose-p:text-lg prose-p:lg:text-xl lg:mb-12"
                           />
                         )}
                       </div>
