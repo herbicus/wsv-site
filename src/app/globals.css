@@ -16,12 +16,23 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  .gh-container {
+    @apply w-full;
+    @apply mx-auto;
+    @apply px-6;
+    @apply lg:px-8;
+  }
+
+  .gh-richtext strong a {
+    @apply font-bold;
+  }
+
+  a {
+    @apply transition;
+  }
+
+  a:hover {
+    @apply text-slate-600;
+  }
 }

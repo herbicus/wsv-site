@@ -24,6 +24,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
+    "ga-4-react": "^0.1.281",
     "next": "14.0.4",
     "next-sanity": "^7.0.6",
     "next-sanity-image": "^6.1.1",
@@ -32,6 +33,7 @@
     "prettier-plugin-tailwindcss": "^0.5.10",
     "react": "^18",
     "react-dom": "^18",
+    "react-portable-text": "^0.6.0",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
