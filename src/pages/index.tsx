@@ -94,7 +94,7 @@ export const getServerSideProps = async () => {
       _id,
       title,
       youTube,
-      "mp4Url": mp4.asset->url,
+      "mp4": mp4.asset->url,
       description,
       sortOrder
     }
