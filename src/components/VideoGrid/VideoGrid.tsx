@@ -15,13 +15,13 @@ interface Video {
 
 const VideoGrid: React.FC<{ videos: Video[] }> = ({ videos }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-8">
       {videos.map((video) => (
         <div key={video._id} className="block space-y-2">
           <div className="aspect-h-9 aspect-w-16 bg-gray-600">
             {video.youTube || video.mp4 ? (
               <ReactPlayer
-                url={video.youTube || video.mp4.asset.url}
+                url={video.youTube || video.mp4}
                 controls
                 width="100%"
                 height="100%"
@@ -35,7 +35,13 @@ const VideoGrid: React.FC<{ videos: Video[] }> = ({ videos }) => {
               {video.title}
             </h4>
           )}
-          {video.description && <RichText content={video.description} />}
+          {video.description && (
+            <RichText
+              theme="dark"
+              content={video.description}
+              classes="prose-p:text-sm"
+            />
+          )}
         </div>
       ))}
     </div>
