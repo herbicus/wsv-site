@@ -1,18 +1,16 @@
 import {
-  faClipboard,
-  faHome,
   faHouse,
   faImages,
   faListCheck,
   faLocationDot,
-  faMap,
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+
 export const baseLinks = [
-  { name: "Welcome", href: "#welcome" },
-  { name: "Map", href: "#map" },
   { name: "Gallery", href: "#gallery" },
+  { name: "Videos", href: "#videos" },
 ];
 
 export const welcomeLinks = [
@@ -43,27 +41,6 @@ export const welcomeLinks = [
 ];
 
 export const navLinks = [
-  { name: "Welcome", href: "#welcome", icon: faHome },
-  { name: "Map", href: "#map", icon: faLocationDot },
   { name: "Gallery", href: "#gallery", icon: faImages },
-  {
-    name: "Rules",
-    href: "#rules",
-    icon: faClipboard,
-  },
-  {
-    name: "Amenities",
-    href: "#amenities",
-    icon: faListCheck,
-  },
-  {
-    name: "Things To Checkout",
-    href: "#places",
-    icon: faMap,
-  },
-  {
-    name: "Good Eats",
-    href: "#eats",
-    icon: faUtensils,
-  },
+  { name: "Videos", href: "#videos", icon: faYoutube },
 ];

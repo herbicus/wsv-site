@@ -1,7 +1,9 @@
-import React, { Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import React, { Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 
-import SiteIcon from '@/components/SiteIcon/SiteIcon';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface MobileNavigationProps {
   isOpen: boolean;
@@ -62,8 +64,8 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
                         onClick={() => setIsOpen(false)}
                       >
                         <span className="sr-only">Close panel</span>
-                        <SiteIcon
-                          iconName="fa-solid fa-close"
+                        <FontAwesomeIcon
+                          icon={faXmark}
                           className="h-6 w-6"
                           aria-hidden="true"
                         />

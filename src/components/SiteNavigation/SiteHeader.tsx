@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { ScrollContext } from "@/context/ScrollContext";
 
-// import MobileNavigation from "./MobileNavigation";
+import MobileNavigation from "./MobileNavigation";
 
 // import SiteIcon from "@/components/SiteIcon/SiteIcon";
 import ScrollLink from "@/components/ScrollLink/ScrollLink";
@@ -13,12 +13,12 @@ import ScrollLink from "@/components/ScrollLink/ScrollLink";
 import {
   faBars,
   faEnvelope,
-  faSkull,
+  faSkullCrossbones,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
-// import { baseLinks, welcomeLinks, navLinks } from "@/data/navigation";
-// import { CONTACT_URL } from "@/data/constants";
+import { baseLinks, welcomeLinks, navLinks } from "@/data/navigation";
+import { CONTACT_URL } from "@/data/constants";
 
 type SiteHeaderProps = {
   isSignedIn?: boolean;
@@ -50,7 +50,7 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
             className="-m-2.5 inline-flex items-center justify-center gap-x-4 rounded-md p-2.5 text-gray-900 hover:text-gray-900"
           >
             <FontAwesomeIcon
-              icon={faSkull}
+              icon={faSkullCrossbones}
               className="h-6 w-6"
               aria-hidden="true"
             />
@@ -61,7 +61,7 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
           </ScrollLink>
         </div>
 
-        {/* <div className="flex w-full items-center justify-center gap-x-4 lg:flex-1">
+        <div className="flex w-full items-center justify-center gap-x-4 lg:flex-1">
           <ul className="hidden items-center justify-center gap-x-6 lg:flex">
             {baseLinks.map((item) => (
               <li className="font-semibold text-gray-900" key={item.name}>
@@ -74,10 +74,10 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
               </li>
             ))}
           </ul>
-        </div> */}
+        </div>
 
-        {/* <div className="flex items-center justify-end gap-x-4 lg:flex-1">
-          <Menu as="div" className="relative hidden lg:block">
+        <div className="flex items-center justify-end gap-x-4 lg:flex-1">
+          {/* <Menu as="div" className="relative hidden lg:block">
             <Menu.Button className="inline-flex items-center gap-x-2 font-semibold text-gray-900 transition hover:text-slate-600">
               <span className="sr-only">Menu</span>
               <FontAwesomeIcon
@@ -167,7 +167,7 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
                 </div>
               </Menu.Items>
             </Transition>
-          </Menu>
+          </Menu> */}
 
           <div className="flex lg:hidden">
             <button
@@ -185,10 +185,12 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
               />
             </button>
           </div>
-        </div> */}
+
+          <div className="hidden lg:block lg:flex-1" />
+        </div>
       </nav>
 
-      {/* <MobileNavigation isOpen={isNavOpen} setIsOpen={setIsNavOpen}>
+      <MobileNavigation isOpen={isNavOpen} setIsOpen={setIsNavOpen}>
         <div className="flex h-[75%] flex-col justify-between">
           <ul className="block space-y-6">
             {navLinks.map((item) => (
@@ -212,7 +214,7 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
               </li>
             ))}
           </ul>
-          <a
+          {/* <a
             href={CONTACT_URL}
             className="font-regular flex items-center justify-center gap-x-2 rounded-md px-4 py-1.5 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-500 transition-all hover:bg-slate-100 hover:text-slate-900 hover:shadow-md"
             target="_blank"
@@ -225,9 +227,9 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
             />
 
             <span>Message Host</span>
-          </a>
+          </a> */}
         </div>
-      </MobileNavigation> */}
+      </MobileNavigation>
     </header>
   );
 };
