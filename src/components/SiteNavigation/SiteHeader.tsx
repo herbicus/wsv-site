@@ -1,4 +1,5 @@
 import React, { Fragment, useContext, useState } from "react";
+import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ScrollContext } from "@/context/ScrollContext";
 
 import MobileNavigation from "./MobileNavigation";
-
-// import SiteIcon from "@/components/SiteIcon/SiteIcon";
 import ScrollLink from "@/components/ScrollLink/ScrollLink";
 
 import {
@@ -19,6 +18,8 @@ import {
 
 import { baseLinks, welcomeLinks, navLinks } from "@/data/navigation";
 import { CONTACT_URL } from "@/data/constants";
+
+import logoLockup from "@/assets/images/wsv-logo.png";
 
 type SiteHeaderProps = {
   isSignedIn?: boolean;
@@ -47,17 +48,18 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
         <div className="flex items-center gap-x-4 lg:flex-1">
           <ScrollLink
             href="#home"
-            className="-m-2.5 inline-flex items-center justify-center gap-x-4 rounded-md p-2.5 text-gray-900 hover:text-gray-900"
+            className="-m-2.5 inline-flex items-center justify-center gap-x-4 rounded-md p-2.5 text-slate-900 hover:text-slate-700"
           >
-            <FontAwesomeIcon
-              icon={faSkullCrossbones}
-              className="h-6 w-6"
-              aria-hidden="true"
+            <Image
+              src={logoLockup}
+              width={312}
+              height={198}
+              priority
+              className="max-w-20"
+              alt="Whiskey Shit Vomit - Puking Skull Logo"
             />
 
-            <span className="block whitespace-nowrap font-light leading-none lg:text-lg">
-              Whiskey Shit Vomit
-            </span>
+            <span className="sr-only">Whiskey Shit Vomit</span>
           </ScrollLink>
         </div>
 

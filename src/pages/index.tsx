@@ -4,6 +4,7 @@ import sanityClient from "@/data/sanity.config";
 import SiteImage from "@/components/SiteImage/SiteImage";
 import SiteIcon from "@/components/SiteIcon/SiteIcon";
 import RichText from "@/components/RichText/RichText";
+import ScrollLink from "@/components/ScrollLink/ScrollLink";
 
 import { Main } from "@/templates/Main";
 import { Meta } from "@/layouts/Meta";
@@ -13,7 +14,6 @@ import SiteSlider from "@/components/SiteSlider/SiteSlider";
 import VideoGrid from "@/components/VideoGrid/VideoGrid";
 
 import { imageMeta } from "@/data/queries";
-import ScrollLink from "@/components/ScrollLink/ScrollLink";
 
 interface SiteProps {
   data: {

@@ -60,7 +60,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
                     <div className="relative z-20 flex items-center justify-end px-6 pt-20 sm:px-8">
                       <button
                         type="button"
-                        className="rounded-md text-slate-700 hover:text-white"
+                        className="rounded-md text-slate-700"
                         onClick={() => setIsOpen(false)}
                       >
                         <span className="sr-only">Close panel</span>

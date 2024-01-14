@@ -1,11 +1,13 @@
 import React, { FC } from "react";
+import Image from "next/image";
 
-// import SiteIcon from "@/components/SiteIcon/SiteIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScrollLink from "@/components/ScrollLink/ScrollLink";
 
 import { CONTACT_URL } from "@/data/constants";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+import logo from "@/assets/images/wsv-logo.png";
 
 type NavLink = {
   name: string;
@@ -21,10 +23,15 @@ const SiteFooter: FC<SiteFooterProps> = ({ navLinks }) => {
   return (
     <footer className="bg-neutral-800 py-8">
       <div className="gh-container flex max-w-8xl gap-6">
-        <div className="flex items-center gap-x-4 justify-between w-full">
-          <h5 className="mb-6 block text-2xl lg:text-4xl">
-            Whiskey Shit Vomit
-          </h5>
+        <div className="flex gap-x-4 justify-between w-full">
+          <Image
+            src={logo}
+            width={312}
+            height={198}
+            priority
+            className=""
+            alt="Whiskey Shit Vomit - Puking Skull Logo"
+          />
 
           <ul className="grid grid-cols-4 gap-x-6 gap-y-6 lg:grid-cols-12 lg:gap-y-4">
             {navLinks.map((item) => (
