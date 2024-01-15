@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import dynamic from "next/dynamic";
 
@@ -10,6 +11,7 @@ interface Video {
   title?: string;
   youTube?: string;
   mp4?: any;
+  poster?: any;
   description?: any;
 }
 
@@ -23,6 +25,15 @@ const VideoGrid: React.FC<{ videos: Video[] }> = ({ videos }) => {
               <ReactPlayer
                 url={video.youTube || video.mp4}
                 controls
+                light={
+                  video.poster ? (
+                    <img
+                      src={video.poster}
+                      className="absolute pointer-events-none w-full h-full inset-0 object-cover"
+                      alt="Thumbnail"
+                    />
+                  ) : undefined
+                }
                 width="100%"
                 height="100%"
               />

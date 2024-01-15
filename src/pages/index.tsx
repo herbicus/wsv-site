@@ -95,6 +95,7 @@ export const getStaticProps = async () => {
       title,
       youTube,
       "mp4": mp4.asset->url,
+      "poster": poster.asset->url,
       description,
       sortOrder
     }
