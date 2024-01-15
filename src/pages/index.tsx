@@ -78,7 +78,7 @@ const HomePage: React.FC<SiteProps> = ({ data, slides, videos }) => {
 
 export default HomePage;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const query = `
   {
     "site": *[_type == "site"] {

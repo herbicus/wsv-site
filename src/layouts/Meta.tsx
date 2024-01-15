@@ -36,9 +36,22 @@ const Meta: React.FC<MetaProps> = (props) => {
         <link
           rel="icon"
           type="image/png"
+          sizes="192x192"
+          href={`${router.basePath}/android-icon-192x192.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
           sizes="32x32"
           href={`${router.basePath}/favicon-32x32.png`}
           key="icon32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href={`${router.basePath}/favicon-96x96.png`}
+          key="icon96"
         />
         <link
           rel="icon"
@@ -52,6 +65,13 @@ const Meta: React.FC<MetaProps> = (props) => {
           href={`${router.basePath}/favicon.ico`}
           key="favicon"
         />
+
+        <meta name="msapplication-TileColor" content="#000" />
+        <meta
+          name="msapplication-TileImage"
+          content={`${router.basePath}/ms-icon-144x144.png`}
+        />
+        <meta name="theme-color" content="#000" />
       </Head>
       <NextSeo
         title={props.title}

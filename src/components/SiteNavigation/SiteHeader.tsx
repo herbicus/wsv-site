@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { Fragment, useContext, useState } from "react";
 import Image from "next/image";
 import { Menu, Transition } from "@headlessui/react";
@@ -20,6 +21,8 @@ import { baseLinks, welcomeLinks, navLinks } from "@/data/navigation";
 import { CONTACT_URL } from "@/data/constants";
 
 import logoLockup from "@/assets/images/wsv-logo.png";
+
+import Logo64 from "@/assets/images/logo64";
 
 type SiteHeaderProps = {
   isSignedIn?: boolean;
@@ -50,14 +53,22 @@ const SiteHeader: React.FC<SiteHeaderProps> = () => {
             href="#home"
             className="-m-2.5 inline-flex items-center justify-center gap-x-4 rounded-md p-2.5 text-slate-900 hover:text-slate-700"
           >
-            <Image
+            {/* <Image
               src={logoLockup}
               width={312}
               height={198}
               priority
               className="max-w-20"
               alt="Whiskey Shit Vomit - Puking Skull Logo"
-            />
+            /> */}
+
+            <Logo64 className="max-w-20" />
+
+            {/* <img
+              src={logoLockup as any}
+              className="max-w-20"
+              alt="Whiskey Shit Vomit - Puking Skull Logo"
+            /> */}
 
             <span className="sr-only">Whiskey Shit Vomit</span>
           </ScrollLink>
