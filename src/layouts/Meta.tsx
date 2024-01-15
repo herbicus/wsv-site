@@ -85,7 +85,7 @@ const Meta: React.FC<MetaProps> = (props) => {
           site_name: "Whiskey Shite Vomit - Band Site",
           images: [
             {
-              url: `${router.basePath}/meta-op-image.jpg`,
+              url: `${router.basePath}/meta-og-image.png`,
               alt: "Whiskey Shite Vomit - Band Site",
             },
           ],
